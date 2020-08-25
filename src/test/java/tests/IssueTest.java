@@ -18,7 +18,7 @@ import static io.qameta.allure.Allure.*;
 public class IssueTest {
 
     private static final String BASE_URL = "https://github.com";
-    private static final String REPOSITORY = "ae-podgor/qa_guru_course_2_Alina";
+    private static final String REPOSITORY = "ae-podgor/Allure_report_lesson_Alina";
     private static final int ISSUE = 1;
 
     private BasicSteps steps = new BasicSteps();
@@ -78,7 +78,7 @@ public class IssueTest {
 
 
     @Test
-    @DisplayName("Пользователь должен иметь возможность найти Issue по номеру")
+    @DisplayName("Пользователь должен иметь возможность найти Issue по номеру (через степы)")
     public void shouldFindIssueByNumberSecond () {
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
@@ -88,7 +88,7 @@ public class IssueTest {
     }
 
     @Test
-    @DisplayName("Пользователь не должен найти отсутствующую Issue по номеру2")
+    @DisplayName("Пользователь не должен найти отсутствующую Issue по номеру (через степы)")
     public void shouldNotFindMissingIssueByNumberSecond () {
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
