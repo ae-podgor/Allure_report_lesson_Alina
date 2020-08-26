@@ -6,16 +6,18 @@ import io.qameta.allure.restassured.AllureRestAssured;
 
 import static io.restassured.RestAssured.given;
 
-@JsonIgnoreProperties(ignoreUnknown = true) //используется для того,чтобы при конвертации json-a пропускать поля, которые мы не объявили
+
 public class ApiSteps {
 
     @Step("Создаем задачу с заданным названием")
     public Issue createIssue(String title) {
+
         final Issue toCreate = new Issue();
         toCreate.setTitle(title);
         return given()
+                .proxy(3128)
                 .filter(new AllureRestAssured())
-                .header("Authorization", "token fa64c3766b4c369b1e359ead8abc3c5745700e98")
+                .header("Authorization", "token 7d6f18ef8bfa181ffb08264df7758119c87e0940")
                 .baseUri("https://api.github.com")
                 .body(toCreate)
         .when()

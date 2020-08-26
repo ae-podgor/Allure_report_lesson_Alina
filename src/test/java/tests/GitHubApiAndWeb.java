@@ -27,9 +27,7 @@ public class GitHubApiAndWeb {
 
     @Test
     @DisplayName("Пользователь должен найти созданную через API Issue")
-    public void shouldNotFindMissingIssueByNumberSecond () {
-
-
+    public void shouldFindMissingIssueByNumberSecond () {
         final Issue created = apiSteps.createIssue("Hello from second stream!");
 
         webSteps.openMainPage();

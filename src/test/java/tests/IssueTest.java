@@ -39,7 +39,7 @@ public class IssueTest {
             $(".header-search-input").submit();
         });
         step("Переходим по ссылке репозитория " + REPOSITORY, () -> {
-            $(By.linkText("ae-podgor/qa_guru_course_2_Alina")).click();
+            $(By.linkText("ae-podgor/Allure_report_lesson_Alina")).click();
         });
         step("Открываем страницу с задачами", () -> {
             $(withText("Issues")).click();
@@ -66,7 +66,7 @@ public class IssueTest {
             $(".header-search-input").submit();
         });
         step("Переходим по ссылке репозитория " + REPOSITORY, () -> {
-            $(By.linkText("ae-podgor/qa_guru_course_2_Alina")).click();
+            $(By.linkText("ae-podgor/Allure_report_lesson_Alina")).click();
         });
         step("Открываем страницу с задачами", () -> {
             $(withText("Issues")).click();
